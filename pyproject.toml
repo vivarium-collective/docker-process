@@ -1,0 +1,21 @@
+[project]
+name = "docker-process"
+version = "0.0.1"
+description = "docker execution for process interface"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "bigraph-schema",
+    "process-bigraph",
+    "docker>=7.1.0",
+]
+
+[tool.setuptools]
+packages = [
+    "docker_process",
+    "docker_process.protocols",
+]
+
+[tool.uv.sources]
+bigraph-schema = { path = "../bigraph-schema", editable = true }
+process-bigraph = { path = "../process-bigraph", editable = true }
