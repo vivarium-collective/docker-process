@@ -181,14 +181,14 @@ class DockerProcess(Process):
         self._config = config
         
     @property
-    def composition(self) -> Dict[str, Any]:
+    def schema(self) -> Dict[str, Any]:
         return {
             '_type': 'process',
             '_inputs': self.inputs(),
             '_outputs': self.outputs()}
 
-    @composition.setter
-    def composition(self, composition):
+    @schema.setter
+    def schema(self, schema):
         pass
 
     @property
